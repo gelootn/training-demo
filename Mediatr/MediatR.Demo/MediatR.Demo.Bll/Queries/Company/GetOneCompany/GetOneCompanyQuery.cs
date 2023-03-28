@@ -1,3 +1,7 @@
-﻿namespace MediatR.Demo.Bll.Queries.Company.GetOneCompany;
+﻿
+using MediatR.Demo.Bll.Models;
+using MediatR.Demo.Framework;
 
-public record GetOneCompanyQuery(int CompanyId) : IRequest<GetOneCompanyQueryResult>;
+namespace MediatR.Demo.Bll.Queries.Company.GetOneCompany;
+
+public record GetOneCompanyQuery(int CompanyId) : IRequest<Response<CompanyDetail>>;
