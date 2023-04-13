@@ -1,5 +1,6 @@
 ﻿using FluentValidation;
 using MediatR.Demo.Framework;
+using MediatR.Demo.Framework.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -24,7 +25,7 @@ namespace MediatR.Demo.Bll.Infrastructure.Behaviors
             {
                 var resultType = typeof(TResponse).GetGenericArguments()[0];
                 var failedValidationResponseType = typeof(Response<>).MakeGenericType(resultType);
-                var invalidResponse = Activator.CreateInstance(failedValidationResponseType, origjero) as TResponse;
+                var invalidResponse = Activator.CreateInstance(failedValidationResponseType, ex.GetMessages()) as TResponse;
 
                 //LOG ex;
                 return invalidResponse;
