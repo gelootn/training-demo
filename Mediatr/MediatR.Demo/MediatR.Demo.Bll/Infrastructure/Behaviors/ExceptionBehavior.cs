@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 namespace MediatR.Demo.Bll.Infrastructure.Behaviors
 {
     internal class ExceptionBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
+        where TResponse : class
     {
         public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
         {

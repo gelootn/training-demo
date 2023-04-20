@@ -23,6 +23,7 @@ public class CompanyController : ControllerBase
     }
 
     [HttpGet]
+    [ProducesResponseType(typeof(GetAllCompaniesQueryResult), StatusCodes.Status200OK)]
     public async Task<IActionResult> GetAll()
     {
         var command = new GetAllCompaniesQuery();
