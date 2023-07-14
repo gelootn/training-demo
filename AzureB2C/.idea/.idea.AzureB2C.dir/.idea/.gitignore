@@ -2,10 +2,10 @@
 /shelf/
 /workspace.xml
 # Rider ignored files
+/contentModel.xml
 /projectSettingsUpdater.xml
 /modules.xml
-/contentModel.xml
-/.idea.azure-ad-b2c.iml
+/.idea.AzureB2C.iml
 # Editor-based HTTP Client requests
 /httpRequests/
 # Datasource local storage ignored files
