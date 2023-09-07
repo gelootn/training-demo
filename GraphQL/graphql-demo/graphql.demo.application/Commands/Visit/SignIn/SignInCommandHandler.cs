@@ -1,5 +1,4 @@
-﻿using graphql.demo.persistence.Entities;
-using MediatR;
+﻿using MediatR;
 
 namespace graphql.demo.application.Commands.Visit.SignIn;
 

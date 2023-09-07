@@ -13,6 +13,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddBusinessLayer(builder.Configuration.GetConnectionString("demo"));
 builder.Services.AddGraphQLServer()
     .AddFiltering()
+    .AddSorting()
     .AddQueryType<VisitQueryType>();
 
 var app = builder.Build();

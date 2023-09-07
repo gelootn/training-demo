@@ -1,9 +1,4 @@
-﻿using graphql.demo.application.Models;
-using graphql.demo.application.Queries.Visit.GetVisits;
-using graphql.demo.persistence.Entities;
-using graphql.demo.persistence.Infrastructure.Filters;
-
-namespace graphql.demo.application.Infrastructure.Mapping;
+﻿namespace graphql.demo.application.Infrastructure.Mapping;
 
 public class VisitMap : Profile
 {
@@ -19,7 +14,7 @@ public class VisitMap : Profile
             .ForMember(x => x.EndTime, cfg => cfg.MapFrom(x=> x.Stop))
             ;
 
-        CreateMap<GetVisitsQuery, VisitFilter>();
+
 
 
         CreateProjection<Visit, VisitDetail>().ForMember(x => x.VisitorName, cfg => cfg.MapFrom(x => x.Visitor.Name))

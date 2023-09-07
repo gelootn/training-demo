@@ -22,4 +22,5 @@
       <ProjectReference Include="..\graphql.demo.persistence\graphql.demo.persistence.csproj" />
     </ItemGroup>
 
+
 </Project>
