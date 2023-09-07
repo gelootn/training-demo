@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="HotChocolate" Version="13.2.1" />
+        <PackageReference Include="HotChocolate.AspNetCore" Version="13.2.1" />
+        <PackageReference Include="HotChocolate.Data.EntityFramework" Version="13.2.1" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.7">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\graphql.demo.application\graphql.demo.application.csproj" />
+      <ProjectReference Include="..\graphql.demo.persistence\graphql.demo.persistence.csproj" />
+    </ItemGroup>
+
+</Project>

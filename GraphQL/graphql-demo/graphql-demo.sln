@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "graphql.demo.persistence", "graphql.demo.persistence\graphql.demo.persistence.csproj", "{13E10E76-0BB3-4D43-BF56-B7C69ECDB98D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00. Framework", "00. Framework", "{01581104-04A6-4187-829F-09CC6D3E974A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01. Persistance", "01. Persistance", "{B452A928-1377-45A7-9ED9-D80B07AE17C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "graphql.demo.framework", "graphql.demo.framework\graphql.demo.framework.csproj", "{B9532AA3-25FC-4781-9830-8DFA05F649F9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02. Application", "02. Application", "{150D13F9-BB9F-490B-8A8C-672C734CD848}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "graphql.demo.application", "graphql.demo.application\graphql.demo.application.csproj", "{CD9EDDDF-A7B4-4B18-94CE-27C01D491532}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03. Endpoints", "03. Endpoints", "{1D38B112-2BFB-470B-A603-94F4A89EE51C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "graphql.demo.api", "graphql.demo.api\graphql.demo.api.csproj", "{D663AC9C-A6AD-4626-B99A-715949CBF0F7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{13E10E76-0BB3-4D43-BF56-B7C69ECDB98D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13E10E76-0BB3-4D43-BF56-B7C69ECDB98D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13E10E76-0BB3-4D43-BF56-B7C69ECDB98D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13E10E76-0BB3-4D43-BF56-B7C69ECDB98D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9532AA3-25FC-4781-9830-8DFA05F649F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9532AA3-25FC-4781-9830-8DFA05F649F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9532AA3-25FC-4781-9830-8DFA05F649F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9532AA3-25FC-4781-9830-8DFA05F649F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD9EDDDF-A7B4-4B18-94CE-27C01D491532}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD9EDDDF-A7B4-4B18-94CE-27C01D491532}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD9EDDDF-A7B4-4B18-94CE-27C01D491532}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD9EDDDF-A7B4-4B18-94CE-27C01D491532}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D663AC9C-A6AD-4626-B99A-715949CBF0F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D663AC9C-A6AD-4626-B99A-715949CBF0F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D663AC9C-A6AD-4626-B99A-715949CBF0F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D663AC9C-A6AD-4626-B99A-715949CBF0F7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{13E10E76-0BB3-4D43-BF56-B7C69ECDB98D} = {B452A928-1377-45A7-9ED9-D80B07AE17C2}
+		{B9532AA3-25FC-4781-9830-8DFA05F649F9} = {01581104-04A6-4187-829F-09CC6D3E974A}
+		{CD9EDDDF-A7B4-4B18-94CE-27C01D491532} = {150D13F9-BB9F-490B-8A8C-672C734CD848}
+		{D663AC9C-A6AD-4626-B99A-715949CBF0F7} = {1D38B112-2BFB-470B-A603-94F4A89EE51C}
+	EndGlobalSection
+EndGlobal
