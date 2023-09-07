@@ -1,11 +1,4 @@
-﻿using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MediatRShortDemo
+﻿namespace MediatRShortDemo
 {
     public class App
     {
@@ -20,29 +13,62 @@ namespace MediatRShortDemo
             _notifierMediatorService = notifierMediatorService;
         }
 
-        public void Run()
+        public async Task Run()
         {
             _logger.LogInformation("Run started");
-            Notify();
-            RequestResonse();
-            OneWay();
+            
+            // NOTIFICATION
+            await Notify();
+            await TriggerWrongNotification();
+            
+            // REQUEST
+            await RequestResponse();
+            await OneWay();
+            await TriggerWrongRequest();
+            await TriggerErrorRequest();
+            
             _logger.LogInformation("Run completed");
         }
 
-        private void Notify()
+        private async Task TriggerErrorRequest()
         {
-            _notifierMediatorService.Notify("Test Message");
+            await _notifierMediatorService.TriggerErrorRequest();
         }
-
-        private void RequestResonse()
+        private async Task Notify()
         {
-            string response = _notifierMediatorService.RequestResponse();
-            Console.WriteLine($"In App: {response}");
+            await _notifierMediatorService.Notify("Test Message");
         }
-
-        private void OneWay()
+        private async Task RequestResponse()
         {
-            _notifierMediatorService.OneWay();
+            string response = await _notifierMediatorService.RequestResponse();
+            _logger.LogInformation("In App: {Response}", response);
+        }
+        private async Task OneWay()
+        {
+            await _notifierMediatorService.OneWay();
+        }
+        private async Task TriggerWrongRequest()
+        {
+            try
+            {
+                await _notifierMediatorService.TriggerWrongRequest();
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e, "Error in TriggerWrongRequest");
+
+            }
+        }
+        private async Task TriggerWrongNotification()
+        {
+            try
+            {
+                await _notifierMediatorService.TriggerNotifyWrong();
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e, "Error in TriggerWrongNotification");
+            }
         }
     }
 }

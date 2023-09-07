@@ -9,9 +9,15 @@ namespace MediatRShortDemo.Requests
 {
     public class OneWayAsyncHandler : IRequestHandler<OneWayAsync>
     {
+        private readonly ILogger<OneWayAsyncHandler> _logger;
+
+        public OneWayAsyncHandler(ILogger<OneWayAsyncHandler> logger)
+        {
+            _logger = logger;
+        }
         Task IRequestHandler<OneWayAsync>.Handle(OneWayAsync request, CancellationToken cancellationToken)
         {
-            Console.WriteLine("In Async One Way Handler");
+            _logger.LogInformation("In Async One Way Handler");
             return Task.CompletedTask;
         }
     }

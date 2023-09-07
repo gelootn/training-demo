@@ -11,22 +11,34 @@ namespace MediatRShortDemo
         {
             _mediator = mediator;
         }
-        public void Notify(string notifyText)
+        public async Task Notify(string notifyText)
         {
-            _mediator.Publish(new NotificationMessage { Message = notifyText });
+            await _mediator.Publish(new NotificationMessage { Message = notifyText });
+        }
+        
+        public async Task TriggerNotifyWrong()
+        {
+            await _mediator.Publish(new WrongNotification());
         }
 
-        public string RequestResponse()
+        public async Task<string> RequestResponse()
         {
-            string response = Task.Run(
-                async () => await _mediator.Send(new Ping())
-                ).Result;
-            return response;
+            return await _mediator.Send(new Ping());
         }
 
-        public void OneWay()
+        public async Task OneWay()
         {
-            Task.Run(async () => await _mediator.Send(new OneWayAsync()));
+            await _mediator.Send(new OneWayAsync());
+        }
+
+        public async Task TriggerWrongRequest()
+        {
+            await _mediator.Send(new WrongRequest());
+        }
+
+        public async Task TriggerErrorRequest()
+        {
+            await _mediator.Send(new RequestWithError());
         }
     }
 }

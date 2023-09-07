@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MediatR.Demo.EndPoint.Controllers;
 
-[Route("api/[controller]")]
+[Route("api/companies")]
 public class CompanyController : ControllerBase
 {
     private readonly IMediator _mediator;

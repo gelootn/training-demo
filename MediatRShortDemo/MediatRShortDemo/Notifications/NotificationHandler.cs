@@ -1,24 +1,17 @@
-﻿using MediatR;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace MediatRShortDemo.Notifications
 {
     internal class NotificationHandler : INotificationHandler<NotificationMessage>
     {
-        private readonly ILogger<App> _logger;
+        private readonly ILogger<NotificationHandler> _logger;
 
-        public NotificationHandler(ILogger<App> logger)
+        public NotificationHandler(ILogger<NotificationHandler> logger)
         {
             _logger = logger;
         }
         public Task Handle(NotificationMessage notification, CancellationToken cancellationToken)
         {
-            _logger.LogInformation($"NOT001: {notification.Message}");
+            _logger.LogInformation("NOT001: {NotificationMessage}", notification.Message);
             return Task.CompletedTask;
         }
     }

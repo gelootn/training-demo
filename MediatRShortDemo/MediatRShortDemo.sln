@@ -5,6 +5,10 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatRShortDemo", "MediatRShortDemo\MediatRShortDemo.csproj", "{D357E7B6-9372-4FDE-AC4D-A6F421990106}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.Vanilla", "CQRS.Vanilla\CQRS.Vanilla.csproj", "{599E0613-A65A-47BD-BDA0-716E3B80A22F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.MediatR", "CQRS.MediatR\CQRS.MediatR.csproj", "{AB5FBDA0-D962-40DE-8EE2-772D70FA036C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{D357E7B6-9372-4FDE-AC4D-A6F421990106}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D357E7B6-9372-4FDE-AC4D-A6F421990106}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D357E7B6-9372-4FDE-AC4D-A6F421990106}.Release|Any CPU.Build.0 = Release|Any CPU
+		{599E0613-A65A-47BD-BDA0-716E3B80A22F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{599E0613-A65A-47BD-BDA0-716E3B80A22F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{599E0613-A65A-47BD-BDA0-716E3B80A22F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{599E0613-A65A-47BD-BDA0-716E3B80A22F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB5FBDA0-D962-40DE-8EE2-772D70FA036C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB5FBDA0-D962-40DE-8EE2-772D70FA036C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB5FBDA0-D962-40DE-8EE2-772D70FA036C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB5FBDA0-D962-40DE-8EE2-772D70FA036C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

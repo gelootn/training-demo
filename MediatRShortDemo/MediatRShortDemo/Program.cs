@@ -1,32 +1,34 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Serilog;
+﻿
 using System.Reflection;
+using MediatR.Pipeline;
+using MediatRShortDemo.Behaviors;
+using MediatRShortDemo.ExceptionHandling;
 
 namespace MediatRShortDemo
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             var services = ConfigureServices();
             var serviceProvider = services.BuildServiceProvider();
 
-            serviceProvider.GetService<App>().Run();
-
+            await serviceProvider.GetService<App>().Run();
         }
 
         private static IServiceCollection ConfigureServices()
         {
             IServiceCollection services = new ServiceCollection();
 
-            var logger = new LoggerConfiguration()
-                .Enrich.FromLogContext()
-                .WriteTo.File("logs/mediatRDemo.log", rollingInterval: RollingInterval.Day)
-                .WriteTo.Console()
-                .CreateLogger();
 
-            services.AddLogging(builder => builder.AddSerilog(logger, dispose: true));
-            services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
+            services.AddLogging(cfg => cfg.AddConsole(options => options.IncludeScopes = true));
+
+            services.AddMediatR(cfg => 
+                    cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly())
+                        .AddOpenBehavior(typeof(LoggingBehavior<,>)));
+            services.AddTransient(typeof(IRequestExceptionAction<,>), typeof(ExceptionAction<,>));
+            
+            //services.AddTransient(typeof(IRequestExceptionHandler<,,>), typeof(ExceptionHandler<,,>));
             services.AddTransient<IMediatorService, MediatorService>();
             services.AddTransient<App>();
 

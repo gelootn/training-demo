@@ -2,8 +2,11 @@
 {
     public interface IMediatorService
     {
-        void Notify(string notifyText);
-        string RequestResponse();
-        void OneWay();
+        Task Notify(string notifyText);
+        Task TriggerNotifyWrong();
+        Task<string> RequestResponse();
+        Task OneWay();
+        Task TriggerWrongRequest();
+        Task TriggerErrorRequest();
     }
 }

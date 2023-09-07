@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MediatR.Demo.EndPoint.Controllers;
 
-[Route("api/[controller]")]
+[Route("api/visits")]
 public class VisitController : ControllerBase
 {
     private readonly IMediator _mediator;
