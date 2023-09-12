@@ -20,7 +20,7 @@ public class UpdateCompanyCommandHandler : IRequestHandler<UpdateCompanyCommand,
     {
         var company = await _repository.GetCompany(request.Id, cancellationToken);
         if (company == null)
-            return new Response<bool>(false);
+            return Response<bool>.FailResponse("Company Not found");
 
         _mapper.Map(request, company);
 
