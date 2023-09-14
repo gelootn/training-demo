@@ -1,0 +1,12 @@
+﻿{
+    "Logging": {
+        "LogLevel": {
+            "Default": "Debug",
+            "System": "Information",
+            "Microsoft": "Information"
+        }
+    },
+    "ConnectionStrings": {
+        "DefaultConnection": "Server=.;Database=Demo_Integration_Tests;Trusted_Connection=True;MultipleActiveResultSets=true"
+    }
+}
