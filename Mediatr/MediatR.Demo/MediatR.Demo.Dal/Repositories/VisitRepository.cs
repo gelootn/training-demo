@@ -30,10 +30,10 @@ public class VisitRepository : GenericRepository<Visit>, IVisitRepository
 
     public async Task<IReadOnlyCollection<Visit>> GetVisits(VisitFilter filter, CancellationToken cancellationToken)
     {
-        var query = Set.Include(x=> x.Company)
-            .Include(x=>x.Visitor)
-            .Include(x=> x.Employee).AsQueryable();
-        
+        var query = Set.Include(x => x.Company)
+            .Include(x => x.Visitor)
+            .Include(x => x.Employee).AsQueryable();
+
         if (!filter.VisitorName.IsNullEmptyOrWhiteSpace())
             query = query.Where(x => x.Visitor.Name != null && x.Visitor.Name.Contains(filter.VisitorName));
         if (!filter.VisitorEmail.IsNullEmptyOrWhiteSpace())
@@ -44,7 +44,10 @@ public class VisitRepository : GenericRepository<Visit>, IVisitRepository
             query = query.Where(x => x.Company.Name != null && x.Company.Name.Contains(filter.Company));
         if (!filter.Employee.IsNullEmptyOrWhiteSpace())
             query = query.Where(x => x.Employee.Name != null && x.Employee.Name.Contains(filter.Employee));
-        
+
+
+
         return await query.ToListAsync(cancellationToken);
     }
+
 }

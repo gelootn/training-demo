@@ -77,9 +77,14 @@ public class CompanyController : ControllerBase
     }
         
         
-    [HttpPut("{id}/employee")]
-    public async Task<IActionResult> UpdateEmployee([FromRoute] int id,[FromBody]EmployeeModel employee)
+    [HttpPut("{id}/employee/{employeeId}")]
+    public async Task<IActionResult> UpdateEmployee([FromRoute] int id, [FromRoute] int employeeId,[FromBody]EmployeeModel employee)
     {
+        if(id != employee.CompanyId)
+            return BadRequest("company route id and body id do not match");
+        if(employeeId != employee.Id)
+            return BadRequest("employee route id and body id do not match");
+        
         var command = new UpdateEmployeeCommand(id, employee.CompanyId, employee.Name, employee.Email, employee.Function);
         var result = await _mediator.Send(command);
         return Ok(result);

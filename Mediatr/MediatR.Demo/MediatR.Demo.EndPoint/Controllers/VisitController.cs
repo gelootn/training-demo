@@ -38,7 +38,7 @@ public class VisitController : ControllerBase
         
         
     [HttpPost("signin")]
-    public async Task<IActionResult> RegisterVisit(StartVisitModel startVisit)
+    public async Task<IActionResult> RegisterVisit([FromBody]StartVisitModel startVisit)
     {
         var command = new SignInCommand(startVisit.VisitorName, startVisit.VisitorEmail, startVisit.VisitorCompany, startVisit.CompanyId, startVisit.EmployeeId);
         var result = await _mediator.Send(command);
