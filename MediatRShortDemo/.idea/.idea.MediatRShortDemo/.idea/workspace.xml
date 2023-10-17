@@ -9,7 +9,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc285874-1af8-42e5-8ffd-e6672d0090d2" name="Changes" comment="" />
+    <list default="true" id="dc285874-1af8-42e5-8ffd-e6672d0090d2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/CQRS.Vanilla/Implementations/Query/DummyQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CQRS.Vanilla/Implementations/Query/DummyQueryHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CQRS.Vanilla/Implementations/Query/DummyQueryResult.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CQRS.Vanilla/Infrastructure/Command/ICommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CQRS.Vanilla/Infrastructure/Query/IQuery.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MediatRShortDemo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MediatRShortDemo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CQRS.Vanilla/App.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CQRS.Vanilla/App.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CQRS.Vanilla/CQRS.Vanilla.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CQRS.Vanilla/CQRS.Vanilla.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CQRS.Vanilla/Implementations/DummyRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CQRS.Vanilla/Implementations/Command/DummyCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CQRS.Vanilla/Implementations/DummyRequestHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CQRS.Vanilla/Implementations/Command/DummyRequestHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CQRS.Vanilla/Implementations/DummyResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CQRS.Vanilla/Implementations/Command/DummyResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CQRS.Vanilla/Infrastructure/Command/CommandDispatcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CQRS.Vanilla/Infrastructure/Command/CommandDispatcher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CQRS.Vanilla/Infrastructure/Command/ICommandDispatcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CQRS.Vanilla/Infrastructure/Command/ICommandDispatcher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CQRS.Vanilla/Infrastructure/Command/ICommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CQRS.Vanilla/Infrastructure/Command/ICommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CQRS.Vanilla/Infrastructure/Query/IQueryDispatcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CQRS.Vanilla/Infrastructure/Query/IQueryDispatcher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CQRS.Vanilla/Infrastructure/Query/QueryDispatcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CQRS.Vanilla/Infrastructure/Query/QueryDispatcher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CQRS.Vanilla/ReadMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/CQRS.Vanilla/ReadMe.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,11 +94,11 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected=".NET Project.CQRS.MediatR">
+  <component name="RunManager" selected=".NET Project.MediatRShortDemo">
     <configuration name="CQRS.MediatR" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/CQRS.MediatR/bin/Debug/net7.0/CQRS.MediatR.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CQRS.MediatR/bin/Debug/net7.0" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
@@ -90,15 +108,15 @@
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
       <option name="PROJECT_KIND" value="DotNetCore" />
-      <option name="PROJECT_TFM" value="" />
+      <option name="PROJECT_TFM" value="net7.0" />
       <method v="2">
         <option name="Build" />
       </method>
     </configuration>
     <configuration name="MediatRShortDemo" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/MediatRShortDemo/bin/Debug/net7.0/MediatRShortDemo.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MediatRShortDemo/bin/Debug/net7.0" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
@@ -108,15 +126,15 @@
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
       <option name="PROJECT_KIND" value="DotNetCore" />
-      <option name="PROJECT_TFM" value="" />
+      <option name="PROJECT_TFM" value="net7.0" />
       <method v="2">
         <option name="Build" />
       </method>
     </configuration>
-    <configuration name="OwnImplementation" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="" />
+    <configuration name="Vanilla" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/CQRS.Vanilla/bin/Debug/net7.0/CQRS.Vanilla.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CQRS.Vanilla/bin/Debug/net7.0" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
@@ -126,11 +144,16 @@
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
       <option name="PROJECT_KIND" value="DotNetCore" />
-      <option name="PROJECT_TFM" value="" />
+      <option name="PROJECT_TFM" value="net7.0" />
       <method v="2">
         <option name="Build" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue=".NET Project.CQRS.MediatR" />
+      <item itemvalue=".NET Project.MediatRShortDemo" />
+      <item itemvalue=".NET Project.Vanilla" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -146,6 +169,9 @@
       <workItem from="1693317567530" duration="3923000" />
       <workItem from="1694078904869" duration="170000" />
       <workItem from="1694079092800" duration="2138000" />
+      <workItem from="1695887906334" duration="2740000" />
+      <workItem from="1696506263779" duration="2208000" />
+      <workItem from="1697116022207" duration="3985000" />
     </task>
     <servers />
   </component>
@@ -156,5 +182,24 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/CQRS.Vanilla/App.cs</url>
+          <line>23</line>
+          <properties documentPath="C:\@DATA\Sourcecode\Private\training-demo\MediatRShortDemo\CQRS.Vanilla\App.cs" initialLine="23" containingFunctionPresentation="Method 'Run'">
+            <startOffsets>
+              <option value="668" />
+            </startOffsets>
+            <endOffsets>
+              <option value="775" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

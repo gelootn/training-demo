@@ -1,4 +1,5 @@
 ﻿using CQRS.Vanilla.Implementations;
+using CQRS.Vanilla.Implementations.Query;
 using CQRS.Vanilla.Infrastructure.Command;
 using CQRS.Vanilla.Infrastructure.Query;
 using Microsoft.Extensions.Logging;
@@ -20,6 +21,9 @@ public class MyApp
     }
     public async Task Run(CancellationToken cancellationToken = default)
     {
-        await _commander.Dispatch<DummyRequest, DummyResponse>(new DummyRequest(), cancellationToken);
+       var result = await _commander.Dispatch<DummyCommand, DummyResponse>(new DummyCommand(), cancellationToken);
+       
+       var queryResult = await _reader.Dispatch<DummyQuery, DummyQueryResult>(new DummyQuery(), cancellationToken);
+       
     }
 }

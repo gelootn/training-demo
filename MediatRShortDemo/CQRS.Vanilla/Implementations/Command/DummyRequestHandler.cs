@@ -3,7 +3,7 @@ using Microsoft.Extensions.Logging;
 
 namespace CQRS.Vanilla.Implementations;
 
-public class DummyRequestHandler : ICommandHandler<DummyRequest, DummyResponse>
+public class DummyRequestHandler : ICommandHandler<DummyCommand, DummyResponse>
 {
     private readonly ILogger<DummyRequestHandler> _logger;
 
@@ -11,9 +11,9 @@ public class DummyRequestHandler : ICommandHandler<DummyRequest, DummyResponse>
     {
         _logger = logger;
     }
-    public async Task<DummyResponse> Handle(DummyRequest request, CancellationToken cancellationToken)
+    public async Task<DummyResponse> Handle(DummyCommand command, CancellationToken cancellationToken)
     {
-        _logger.LogInformation("Handling request {Request}", request.GetType().Name);
+        _logger.LogInformation("Handling request {Request}", command.GetType().Name);
         return new DummyResponse();
     }
 }
