@@ -1,7 +1,9 @@
+using Asp.Versioning;
 using Microsoft.AspNetCore.Mvc;
 
-namespace API.Controllers;
+namespace API.Controllers.v1;
 
+[ApiVersion("1.0", Deprecated = true)]
 [ApiController]
 [Route("[controller]")]
 public class WeatherForecastController : ControllerBase
